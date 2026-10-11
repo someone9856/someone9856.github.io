@@ -1,0 +1,51 @@
+:root{--bg:#f7f8fa;--card:#fff;--ink:#1c2230;--muted:#667085;--line:#e3e7ee;--accent:#2457d6;--accent-ink:#fff;--code:#0f172a;--code-ink:#e6edf7;--warn:#fff4e0;--warn-line:#f0c36d;--ok:#e8f6ee}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f131b;--card:#171c27;--ink:#e8ecf4;--muted:#98a2b3;--line:#283042;--accent:#6c93ff;--accent-ink:#0b1020;--code:#0a0e16;--code-ink:#dbe5f5;--warn:#2b2414;--warn-line:#6b5420;--ok:#13261b}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header h1{font-size:1.05rem;margin:0;padding:12px 0 6px}
+nav{display:flex;gap:6px;padding-bottom:10px;flex-wrap:wrap}
+nav a{padding:6px 12px;border-radius:8px;text-decoration:none;color:var(--ink);border:1px solid var(--line);font-size:.9rem}
+nav a.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+main{padding-top:20px;padding-bottom:30px}
+section{margin-bottom:28px}
+h2{font-size:1.35rem;margin:0 0 10px;line-height:1.3}
+h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:18px 0 6px}
+.lead{color:var(--muted);margin-top:0}
+.muted{color:var(--muted);font-size:.9rem}
+a{color:var(--accent)}
+code{background:var(--line);padding:1px 5px;border-radius:5px;font:.9em ui-monospace,Consolas,monospace}
+.tablewrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+thead th{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.cmp th[scope],.cmp tbody th{white-space:nowrap;color:var(--muted);font-weight:600}
+.nw{white-space:nowrap}
+.btn{display:inline-block;padding:6px 12px;border-radius:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-size:.9rem;margin:2px 0}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.verdict{background:var(--ok);border-radius:10px;padding:12px 14px}
+.warn{background:var(--warn);border:1px solid var(--warn-line);border-radius:10px;padding:12px 14px}
+.plain{padding-left:20px}
+.exp{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:18px;scroll-margin-top:100px}
+.num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:.85rem;margin-right:6px;vertical-align:2px}
+.src{color:var(--muted);font-size:.88rem;margin:0 0 4px}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:.75rem;border:1px solid var(--line);margin-left:6px;color:var(--ink)}
+.k-pc{background:#e6f0ff}.k-pt{background:#fff1d6}.k-ph{background:#f1e6ff}.k-on{background:#dcf6ec}
+@media (prefers-color-scheme:dark){.tag{color:#111}}
+ul,ol{padding-left:22px;margin:6px 0}
+li{margin:3px 0}
+.steps>li{margin:8px 0}
+.note{background:var(--warn);border:1px solid var(--warn-line);border-radius:10px;padding:10px 12px}
+.code{background:var(--code);border-radius:10px;margin:8px 0;overflow:hidden}
+.code-h{display:flex;justify-content:space-between;align-items:center;padding:5px 10px;color:#9fb0cc;font-size:.78rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.copy{background:transparent;border:1px solid rgba(255,255,255,.25);color:#cfe0ff;border-radius:6px;font-size:.75rem;padding:2px 8px;cursor:pointer}
+pre{margin:0;padding:12px;color:var(--code-ink);font:.85rem/1.5 ui-monospace,Consolas,monospace;overflow-x:auto;white-space:pre}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+summary{cursor:pointer;font-weight:600}
+.toc{columns:2;column-gap:28px}
+@media (max-width:560px){.toc{columns:1}h2{font-size:1.2rem}}
+footer{color:var(--muted);font-size:.85rem;padding-bottom:30px}
+@media print{header,.copy,nav{display:none}body{background:#fff;color:#000}.exp{break-inside:avoid;border:0;padding:0}.code{background:#f3f3f3}pre{color:#000}}
